@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element71 | Premium Consulting & Services</title>
+    <meta name="description" content="Element71 delivers high-performance solutions, technical consulting, and strategic advisory for modern businesses.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="glass-header">
+        <div class="container header-container">
+            <a href="#" class="logo" id="nav-logo">
+                <span class="logo-accent">Element</span>71
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#services" class="nav-link" id="link-services">Services</a>
+                <a href="#about" class="nav-link" id="link-about">About</a>
+                <a href="#contact" class="nav-link nav-cta" id="link-contact">Get in Touch</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-glow"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Elevate Your Business to the <span class="text-gradient">Next Level</span></h1>
+                    <p class="hero-subtitle">High-performance technical consulting, bespoke business automation, and forward-thinking digital solutions built for growth.</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary" id="btn-hero-cta">Explore Solutions</a>
+                        <a href="#services" class="btn btn-secondary" id="btn-hero-learn">Our Expertise</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-subtitle">We design and build bespoke systems to streamline your operations and drive efficiency.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="service-icon">⚡</div>
+                        <h3 class="service-card-title">Technical Strategy</h3>
+                        <p class="service-card-text">Tailored architecture and infrastructure designs to scale your operational capacity securely.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div class="service-icon">🤖</div>
+                        <h3 class="service-card-title">Automation & AI</h3>
+                        <p class="service-card-text">Integrate intelligent workflows and agentic solutions to eliminate repetitive, manual processes.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div class="service-icon">🌐</div>
+                        <h3 class="service-card-title">Digital Platforms</h3>
+                        <p class="service-card-text">High-performance, secure web applications and portals optimized for search engines and user conversion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container about-container">
+                <div class="about-content">
+                    <h2 class="section-title">About Element71</h2>
+                    <p class="about-text">We are a specialized technical agency focused on empowering small businesses and startups with enterprise-grade technology. By bridging the gap between complex engineering and practical business objectives, we deliver reliable, scalable systems that save time and increase profitability.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-card glass-card">
+                    <h2 class="section-title text-center">Start a Conversation</h2>
+                    <p class="section-subtitle text-center">Ready to transform your workflow? Let's discuss how we can help your business succeed.</p>
+                    
+                    <form class="contact-form" id="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                        <div class="form-group">
+                            <label for="form-name">Name</label>
+                            <input type="text" id="form-name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email Address</label>
+                            <input type="email" id="form-email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">How can we help you?</label>
+                            <textarea id="form-message" name="message" rows="5" required placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="btn-submit-contact">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2026 Element71. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
