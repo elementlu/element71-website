@@ -67,6 +67,32 @@ To point your custom domain (e.g., `yourdomain.com`) to this GitHub Pages site:
 
 ---
 
+## 📧 Contact Form Backend Integration
+
+Since this site is hosted statically on GitHub Pages, the HTML form cannot process email submissions directly without a backend server. 
+
+To receive messages from the contact form, connect it to one of these free static form handlers:
+
+### Option A: Web3Forms (Free & Unlimited Submissions)
+1. Register for a free access token at [web3forms.com](https://web3forms.com/).
+2. Update the form tag in `index.html` to direct to their API:
+   ```html
+   <form action="https://api.web3forms.com/submit" method="POST">
+   ```
+3. Add a hidden input inside the form containing your access key:
+   ```html
+   <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+   ```
+
+### Option B: Formspree (Free up to 50 submissions/month)
+1. Sign up at [formspree.io](https://formspree.io/) and create a new contact form to get a Form ID.
+2. Update the form tag in `index.html` to point to your Form ID endpoint:
+   ```html
+   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+   ```
+
+---
+
 ## 📂 Project Structure
 
 Here is the initial setup we will build:
