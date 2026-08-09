@@ -260,10 +260,11 @@
                 <div class="sidebar-title">Table of Contents</div>
                 <nav class="sidebar-nav">
                     <a href="#intro" class="sidebar-link active" onclick="activateLink(this)">1. Introduction</a>
-                    <a href="#connecting" class="sidebar-link" onclick="activateLink(this)">2. Accessing the Portal</a>
-                    <a href="#pages" class="sidebar-link" onclick="activateLink(this)">3. Portal Navigation</a>
-                    <a href="#logic" class="sidebar-link" onclick="activateLink(this)">4. Approval Logic</a>
-                    <a href="#architecture" class="sidebar-link" onclick="activateLink(this)">5. System Operations</a>
+                    <a href="#tally-form" class="sidebar-link" onclick="activateLink(this)">2. Teacher Request Form</a>
+                    <a href="#connecting" class="sidebar-link" onclick="activateLink(this)">3. Accessing the Portal</a>
+                    <a href="#pages" class="sidebar-link" onclick="activateLink(this)">4. Portal Navigation</a>
+                    <a href="#logic" class="sidebar-link" onclick="activateLink(this)">5. Approval Logic</a>
+                    <a href="#architecture" class="sidebar-link" onclick="activateLink(this)">6. System Operations</a>
                 </nav>
             </aside>
 
@@ -282,11 +283,42 @@
                     <p class="guide-text">
                         By automating routing and notification schedules, the system guarantees compliance with FOSW accounting policies, tracks item budgets, maintains historical records, and frees board reviewers from long email chains.
                     </p>
-                    
-
                 </section>
 
-                <!-- Section 2: Connecting -->
+                <!-- Section 2: Tally Form -->
+                <section id="tally-form" class="guide-section">
+                    <h2 class="guide-heading-2">Teacher Request Form (Tally.so)</h2>
+                    <p class="guide-text">
+                        The front-facing entry point for teachers, board officers, and staff to request supply purchases or Zelle reimbursements is a clean supply form powered by **Tally.so**. 
+                    </p>
+                    <p class="guide-text">
+                        Teachers enter their homeroom, supply category, Zelle payout account details, and item breakdowns. Tally's conditional logic allows teachers to dynamically add up to 5 items with separate links and costs. Receipts or supply cart screenshots are attached directly to the form and uploaded securely to cloud storage.
+                    </p>
+
+                    <div style="margin: 2rem 0; border: 1px solid var(--color-border); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
+                        <a href="assets/form.png" target="_blank" title="Click to view full screen">
+                            <img src="assets/form.png" alt="FOSW Supply Request Form" style="width: 100%; display: block; border-bottom: 1px solid var(--color-border); transition: opacity 0.3s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1.0">
+                        </a>
+                        <div style="padding: 1rem; background: rgba(15, 23, 42, 0.6); font-size: 0.85rem; color: var(--color-text-muted); text-align: center;">
+                            Figure 1: The FOSW Teacher Purchase Request form built using Tally.so. Click to open full screen.
+                        </div>
+                    </div>
+
+                    <p class="guide-text">
+                        Once submitted, Tally's native integration automatically routes the request data to our Google Sheets backend (`Form Ingestion`), which generates a unique Request ID (e.g. `REQ-2026-001`) and schedules review notifications.
+                    </p>
+
+                    <div style="margin: 2rem 0; border: 1px solid var(--color-border); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
+                        <a href="assets/tally_setup.png" target="_blank" title="Click to view full screen">
+                            <img src="assets/tally_setup.png" alt="Tally Google Sheets Integration" style="width: 100%; display: block; border-bottom: 1px solid var(--color-border); transition: opacity 0.3s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1.0">
+                        </a>
+                        <div style="padding: 1rem; background: rgba(15, 23, 42, 0.6); font-size: 0.85rem; color: var(--color-text-muted); text-align: center;">
+                            Figure 2: Custom Google Sheets column mapping panel inside the Tally Integration settings. Click to open full screen.
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Connecting -->
                 <section id="connecting" class="guide-section">
                     <h2 class="guide-heading-2">Connecting Your Google Account</h2>
                     <p class="guide-text">
@@ -325,7 +357,7 @@
                     </div>
                 </section>
 
-                <!-- Section 3: Pages -->
+                <!-- Section 4: Pages -->
                 <section id="pages" class="guide-section">
                     <h2 class="guide-heading-2">System Pages & Navigation</h2>
                     <p class="guide-text">
@@ -333,9 +365,11 @@
                     </p>
 
                     <div style="margin: 2rem 0; border: 1px solid var(--color-border); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
-                        <img src="assets/dashboard.png" alt="FOSW Active Review Dashboard" style="width: 100%; display: block; border-bottom: 1px solid var(--color-border);">
+                        <a href="assets/dashboard.png" target="_blank" title="Click to view full screen">
+                            <img src="assets/dashboard.png" alt="FOSW Active Review Dashboard" style="width: 100%; display: block; border-bottom: 1px solid var(--color-border); transition: opacity 0.3s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1.0">
+                        </a>
                         <div style="padding: 1rem; background: rgba(15, 23, 42, 0.6); font-size: 0.85rem; color: var(--color-text-muted); text-align: center;">
-                            Figure 1: The FOSW active review dashboard showing requests, statuses, and reviewer initials.
+                            Figure 3: The FOSW active review dashboard showing requests, statuses, and reviewer initials. Click to open full screen.
                         </div>
                     </div>
 
@@ -349,7 +383,7 @@
                     </ul>
                 </section>
 
-                <!-- Section 4: Logic -->
+                <!-- Section 5: Logic -->
                 <section id="logic" class="guide-section">
                     <h2 class="guide-heading-2">Approval Consensus Rules</h2>
                     <p class="guide-text">
@@ -388,7 +422,7 @@
                     </div>
                 </section>
 
-                <!-- Section 5: Operations -->
+                <!-- Section 6: Operations -->
                 <section id="architecture" class="guide-section">
                     <h2 class="guide-heading-2">System Operations & Notifications</h2>
                     <p class="guide-text">
@@ -396,9 +430,11 @@
                     </p>
 
                     <div style="margin: 2rem 0; border: 1px solid var(--color-border); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
-                        <img src="assets/settings.png" alt="Admin Settings Panel" style="width: 100%; display: block; border-bottom: 1px solid var(--color-border);">
+                        <a href="assets/settings.png" target="_blank" title="Click to view full screen">
+                            <img src="assets/settings.png" alt="Admin Settings Panel" style="width: 100%; display: block; border-bottom: 1px solid var(--color-border); transition: opacity 0.3s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1.0">
+                        </a>
                         <div style="padding: 1rem; background: rgba(15, 23, 42, 0.6); font-size: 0.85rem; color: var(--color-text-muted); text-align: center;">
-                            Figure 2: The dynamic Admin Settings panel with five individual role notification switches.
+                            Figure 4: The dynamic Admin Settings panel with five individual role notification switches. Click to open full screen.
                         </div>
                     </div>
 
@@ -406,9 +442,11 @@
                         <li><strong>Inbound Ingestion:</strong> Form entries submitted by teachers (via Google Forms or Tally.so) are recorded on the sheet and automatically trigger reviewer notification alerts.</li>
                         <li><strong>Review Emails:</strong> Notification emails are sent with dynamic Approve/Deny buttons. You can vote directly from the email without opening the web portal.
                             <div style="margin: 1.5rem 0; border: 1px solid var(--color-border); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); max-width: 500px;">
-                                <img src="assets/email.png" alt="FOSW Reviewer Notification Email" style="width: 100%; display: block; border-bottom: 1px solid var(--color-border);">
+                                <a href="assets/email.png" target="_blank" title="Click to view full screen">
+                                    <img src="assets/email.png" alt="FOSW Reviewer Notification Email" style="width: 100%; display: block; border-bottom: 1px solid var(--color-border); transition: opacity 0.3s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1.0">
+                                </a>
                                 <div style="padding: 0.75rem; background: rgba(15, 23, 42, 0.6); font-size: 0.8rem; color: var(--color-text-muted); text-align: center;">
-                                    Figure 3: Rich HTML email sent to reviewer roles with direct Approve/Deny voting buttons.
+                                    Figure 5: Rich HTML email sent to reviewer roles with direct Approve/Deny voting buttons. Click to open full screen.
                                 </div>
                             </div>
                         </li>
