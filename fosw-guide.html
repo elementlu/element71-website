@@ -337,6 +337,13 @@
                         Once authorized, you will see a sleek dark-themed sidebar menu. Below is the purpose of each page:
                     </p>
 
+                    <div style="margin: 2rem 0; border: 1px solid var(--color-border); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
+                        <img src="assets/dashboard.png" alt="FOSW Active Review Dashboard" style="width: 100%; display: block; border-bottom: 1px solid var(--color-border);">
+                        <div style="padding: 1rem; background: rgba(15, 23, 42, 0.6); font-size: 0.85rem; color: var(--color-text-muted); text-align: center;">
+                            Figure 1: The FOSW active review dashboard showing requests, statuses, and reviewer initials.
+                        </div>
+                    </div>
+
                     <ul class="guide-list">
                         <li><strong>All Active:</strong> The primary read-only dashboard table. Lists all active teacher requests in progress, showing their ID, requester name, item name, cost, reviewer votes, and status. Reviewers can search this list and click headers to sort items.</li>
                         <li><strong>Pending Approval:</strong> Your personal review inbox. It shows visual cards representing requests that are currently waiting for <em>your specific vote</em>. Once you cast a vote, the card instantly disappears from this view.</li>
@@ -393,9 +400,23 @@
                         The system works silently in the background of your Google Sheet. It handles:
                     </p>
 
+                    <div style="margin: 2rem 0; border: 1px solid var(--color-border); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
+                        <img src="assets/settings.png" alt="Admin Settings Panel" style="width: 100%; display: block; border-bottom: 1px solid var(--color-border);">
+                        <div style="padding: 1rem; background: rgba(15, 23, 42, 0.6); font-size: 0.85rem; color: var(--color-text-muted); text-align: center;">
+                            Figure 2: The dynamic Admin Settings panel with five individual role notification switches.
+                        </div>
+                    </div>
+
                     <ul class="guide-list">
                         <li><strong>Inbound Ingestion:</strong> Form entries submitted by teachers (via Google Forms or Tally.so) are recorded on the sheet and automatically trigger reviewer notification alerts.</li>
-                        <li><strong>Review Emails:</strong> Notification emails are sent with dynamic Approve/Deny buttons. You can vote directly from the email without opening the web portal.</li>
+                        <li><strong>Review Emails:</strong> Notification emails are sent with dynamic Approve/Deny buttons. You can vote directly from the email without opening the web portal.
+                            <div style="margin: 1.5rem 0; border: 1px solid var(--color-border); border-radius: var(--border-radius-md); overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); max-width: 500px;">
+                                <img src="assets/email.png" alt="FOSW Reviewer Notification Email" style="width: 100%; display: block; border-bottom: 1px solid var(--color-border);">
+                                <div style="padding: 0.75rem; background: rgba(15, 23, 42, 0.6); font-size: 0.8rem; color: var(--color-text-muted); text-align: center;">
+                                    Figure 3: Rich HTML email sent to reviewer roles with direct Approve/Deny voting buttons.
+                                </div>
+                            </div>
+                        </li>
                         <li><strong>Notification Toggles:</strong> Inside Admin Settings, you can mute notifications dynamically (e.g. for testing) or turn off email alerts for specific individuals. Disabled roles will be bypassed during email dispatches.</li>
                         <li><strong>Audit Notes:</strong> Reviewers can write comments/notes in the input fields when voting. These comments are recorded permanently in the Google Sheet for auditor review.</li>
                     </ul>
